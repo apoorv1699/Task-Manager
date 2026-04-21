@@ -28,12 +28,9 @@ export const AuthProvider = ({ children }) => {
 
     const register = async (name, email, password) => {
         const response = await api.post('/auth/register', { name, email, password });
-        const data = response.data;
-        localStorage.setItem('token', data.token);
-        const userData = { name: data.name, email: data.email, role: data.role };
-        localStorage.setItem('user', JSON.stringify(userData));
-        setUser(userData);
-        return data;
+        // Removed auto-login logic (storing token and setting user)
+        // Simply return the response data
+        return response.data;
     };
 
     const logout = () => {

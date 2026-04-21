@@ -58,7 +58,6 @@ const Dashboard = () => {
     };
 
     const handleDelete = async (id) => {
-        if (!window.confirm('Are you sure you want to delete this task?')) return;
         try {
             await api.delete(`/tasks/${id}`);
             setTasks(tasks.filter(t => t.id !== id));

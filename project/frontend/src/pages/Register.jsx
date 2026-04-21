@@ -15,10 +15,18 @@ const Register = () => {
         e.preventDefault();
         try {
             await register(name, email, password);
-            toast.success('Registered successfully');
-            navigate('/dashboard');
+            toast.success('Registered successfully. Please log in.');
+            navigate('/login');
         } catch (error) {
-            toast.error(error.response?.data?.message || error.response?.data || 'Registration failed');
+            let errMsg = 'Registration failed';
+            if (error.response?.data) {
+                if (typeof error.response.data === 'object') {
+                    errMsg = Object.values(error.response.data).join(', ');
+                } else {
+                    errMsg = error.response.data;
+                }
+            }
+            toast.error(errMsg);
         }
     };
 
