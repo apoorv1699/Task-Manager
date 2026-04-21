@@ -11,8 +11,8 @@
 	<groupId>com.assignment</groupId>
 	<artifactId>backend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>backend</name>
-	<description>Backend Assignment</description>
+	<name>task-manager-backend</name>
+	<description>Task Manager Backend</description>
 	<url/>
 	<licenses>
 		<license/>

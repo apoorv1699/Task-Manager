@@ -1,6 +1,6 @@
-# Backend Developer (Intern) Assignment
+# Task Management System
 
-This repository contains the full-stack solution for the Backend Developer Intern Assignment. The project features a robust Spring Boot backend (with Spring Security, JWT, and MySQL) and a responsive React frontend (built with Vite and Tailwind CSS).
+This repository contains the full-stack solution for a robust Task Management System. The project features a Spring Boot backend (with Spring Security, JWT, and MySQL) and a responsive React frontend (built with Vite and Tailwind CSS).
 
 ## 🚀 Tech Stack
 
@@ -38,11 +38,11 @@ This repository contains the full-stack solution for the Backend Developer Inter
 Ensure you have MySQL installed and running locally. Update your `project/backend/src/main/resources/application.properties` file with your specific database credentials:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/assignment_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
+spring.datasource.url=jdbc:mysql://localhost:3306/task_manager_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
 spring.datasource.username=root
 spring.datasource.password=YOUR_MYSQL_PASSWORD
 ```
-*(Note: `createDatabaseIfNotExist=true` will automatically create the `assignment_db` database. Hibernate will auto-generate the `users` and `tasks` tables).*
+*(Note: `createDatabaseIfNotExist=true` will automatically create the `task_manager_db` database. Hibernate will auto-generate the `users` and `tasks` tables).*
 
 ### 2. Running the Backend
 1. Open a terminal and navigate to the backend directory:
